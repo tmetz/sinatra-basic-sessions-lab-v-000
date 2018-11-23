@@ -2,6 +2,12 @@
 <head><title>Your Item</title></head>
 
 <body>
-<%= @session[:item] %>
+<% @session.each do |seskey, sesval| %>
+KEY:<br>
+<%= seskey %><br>
+VALUE: <br>
+<%= sesval %>
+
+<% end %>
 </body>
 </html>
